@@ -35,7 +35,7 @@ namespace ElsaGuides.ContentApproval.Web
                     }))
                 .WriteHttpResponse(
                     HttpStatusCode.OK,
-                    "<h1>Request for Approval Sent</h1><p>Your document has been received and will be reviewed shortly.</p>",
+                    "<h1>Request for Approval Sent IWorkflowBuilder</h1><p>Your document has been received and will be reviewed shortly.</p>",
                     "text/html")
                 .Then<Fork>(activity => activity.WithBranches("Approve", "Reject", "Remind"), fork =>
                 {
